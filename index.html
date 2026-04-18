@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enfrasystem Service Hub - Defect Review</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #f8fafc; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    </style>
+</head>
+<body class="p-8">
+
+    <div class="max-w-5xl mx-auto bg-white shadow-sm border border-gray-100 rounded-sm min-h-screen p-10">
+        
+        <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 bg-[#003366] flex items-center justify-center text-[8px] text-white font-bold p-1 text-center">ENFRASYSTEM</div>
+            <h1 class="text-3xl font-bold text-[#003366]">Enfrasystem $ervice Hub</h1>
+        </div>
+
+        <div class="mb-10 border border-gray-200 rounded shadow-sm">
+            <div class="border-l-4 border-blue-600 bg-gray-50 p-4">
+                <h2 class="text-lg font-bold text-[#003366]">Incident</h2>
+                <p class="text-sm text-gray-600">Incident Request</p>
+            </div>
+        </div>
+
+        <div class="mt-8 border-t pt-8">
+            <h3 class="text-xl font-bold text-[#003366] mb-6">Incident Details</h3>
+            
+            <form class="space-y-6">
+                <div class="grid grid-cols-1 gap-4">
+                    <div>
+                        <span class="text-xs text-red-500 font-bold">* Required field</span>
+                        <input type="text" placeholder="Summary of the issue" 
+                               class="w-full p-3 border border-gray-300 rounded focus:border-blue-500 outline-none">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="severity" class="block text-sm font-semibold text-gray-700 mb-1">Urgency</label>
+                            <select name="severity" class="w-full p-3 border border-gray-300 rounded bg-white">
+                                <option>Critical - Business Stopped</option>
+                                <option>Medium - Significant Impact</option>
+                                <option>Low - Normal Work</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="contactPhone" class="block text-sm font-semibold text-gray-700 mb-1">Contact Phone</label>
+                            <input type="text" id="contactPhone" name="contactPhone" value="+60 123456789" class="w-full p-3 border border-gray-300 rounded bg-gray-100 cursor-not-allowed" readonly>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="detailedDescription" class="block text-sm font-semibold text-gray-700 mb-1">Detailed Description</label>
+                        <textarea name="detailedDescription" id="detailedDescription" style="resize: none;" rows="2" placeholder="Tell us more..." 
+                                  class="w-full p-3 border border-gray-300 rounded focus:border-blue-500 outline-none"></textarea>
+                    </div>
+                </div>
+
+                <div class="flex justify-end gap-3">
+                    <button type="button" class="px-6 py-2 border border-gray-300 rounded text-gray-600 hover:bg-gray-50">Cancel</button>
+                    <button type="submit" class="px-6 py-2 bg-[#003366] text-white rounded hover:bg-blue-900 transition-colors"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
