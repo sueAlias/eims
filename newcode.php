@@ -6,3 +6,4 @@ echo "<div style='color: red; padding: 20px; border: 1px solid red;'>
         <p>3. Information leakage by displaying raw SQL errors to users.</p>
       </div>";
 
+echo "why is not updating?"
