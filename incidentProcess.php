@@ -19,10 +19,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // DEFECT 2: SQL Injection Vulnerability
     // We are inserting variables directly into the string instead of using Prepared Statements.
-    $sql = "INSERT INTO Incidents (Summary, DetailedDescription, UrgencyID, UserID) 
+    $sql = "INSERT INTO Incidents (Summary, DetailedDescription, UrgencyID, UserID)
             VALUES ('$summary', '$description', '$urgency', '$userId')";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($conn->query($sql) === true) {
         echo "<div style='color: green; padding: 20px; border: 1px solid green;'>
                 <h2>Success!</h2>
                 <p>Incident has been logged successfully.</p>
@@ -36,4 +36,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $conn->close();
-?>
