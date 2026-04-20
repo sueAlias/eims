@@ -1,4 +1,3 @@
-
 <?php
 // Database Connection Configuration
 $host = "localhost";
